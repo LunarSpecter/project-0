@@ -3,18 +3,131 @@
 
 <head>
     <title>Project 0</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container-advance {
+            background: #202124;
+            height: 100vh;
+        }
+
+        .box1 {
+            border: 1px solid black;
+            height: 136px;
+            position: relative;
+        }
+
+        a {
+            color: white;
+            position: absolute;
+            top: 18px;
+            left: 15px;
+            font-weight: 300;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .adv {
+            color: #f28b82;
+            position: absolute;
+            bottom: 25px;
+            left: 42px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .decro {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+
+        }
+
+        .box2 {
+            padding: 40px;
+            position: relative;
+        }
+
+        h3 {
+            color: white;
+            padding: 0px 0px 20px 0px;
+        }
+
+        label {
+            /* border: 2px solid white; */
+            color: white;
+            width: 250px;
+            font-size: 14px;
+            padding: 5px;
+
+        }
+
+        input.adv_form {
+            width: 500px;
+            background-color: #202124;
+            border: 1px solid #202124;
+            border: 1px solid #5f6368;
+            color: white;
+            padding: 0px 0px 0px 4px;
+        }
+
+        .adbtn {
+            position: absolute;
+            left: 699px;
+            bottom: 3px;
+            background-color: #8ab4f8;
+            padding: 7px;
+            border: none;
+
+
+        }
+
+        .adbtn:hover {
+            background-color: #abcaf7;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <a href="./index.html" class="back"> &#129060 </a>
-        <h1>Google</h1>
-        <form action="https://google.com/advanded_search">
-            <input type="text" name="query" placeholder="Search Google or Type a URL">
-            <button type="submit">Search</button>
+    <div class="container-advance">
+        <div class="box1">
+            <a href="./index.html">Google</a>
+            <p class="adv">Advance Search</p>
+        </div>
+        <div class="box2">
+            <h3>Find pages with...</h3>
 
-        </form>
+            <form action="https://google.com/search">
+                <div class="decro">
+                    <label>all these words:</label>
+                    <input class="adv_form" type="text" name="as_q">
+                </div>
+
+                <div class="decro">
+                    <label>this exact word or phrase:</label>
+                    <input class="adv_form" type="text" name="as_epq">
+                </div>
+
+                <div class="decro">
+                    <label>any of these words:</label>
+                    <input class="adv_form" type="text" name="as_oq">
+                </div>
+
+                <div class="decro">
+                    <label>none of these words:</label>
+                    <input class="adv_form" type="text" name="as_eq">
+                </div>
+                <div class="btn">
+                    <button class="adbtn" type="submit">Advance Search</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
